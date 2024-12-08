@@ -87,4 +87,15 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [MAC_FN] = { ENCODER_CCW_CW(RGB_VAI, RGB_VAD) }
 };
 #endif
+#if defined(KEY_CANCELLATION_ENABLE)
+const key_cancellation_t PROGMEM key_cancellation_list[] = {
+    // on key down
+    //       |    key to be released
+    //       |     |
+    [0] = {KC_D, KC_A},
+    [1] = {KC_A, KC_D},
+    [2] = {KC_W, KC_S},
+    [3] = {KC_S, KC_W},
+};
+#endif
 
